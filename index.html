@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drop by Drop | Charity: Water Game</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
-    <script src="script.js"></script>
+  <main class="game-container">
+    <header class="game-header">
+      <h1>Drop by Drop</h1>
+      <p>
+        Make smart choices to help a community get access to clean and safe water.
+      </p>
+    </header>
+
+    <section class="game-stats">
+      <div class="stat-card">
+        <span>Impact Score</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Time Left</span>
+        <strong id="timer">45</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Goal</span>
+        <strong>30</strong>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <p>Clean Water Progress</p>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+    </section>
+
+    <section class="scenario-card">
+      <h2 id="scenario-title">Ready to start?</h2>
+      <p id="feedback">
+        Click start and choose the best clean water solutions before time runs out.
+      </p>
+    </section>
+
+    <section id="choices" class="choices">
+      <!-- JavaScript will add choice buttons here -->
+    </section>
+
+    <section class="controls">
+      <button id="start-btn">Start Game</button>
+      <button id="reset-btn">Reset</button>
+    </section>
+
+    <section id="celebration" class="celebration">
+      <!-- Win celebration will appear here -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
