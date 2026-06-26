@@ -121,6 +121,7 @@ body {
   margin-bottom: 20px;
   border-left: 8px solid #2E9DF7;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease, border-left-color 0.3s ease;
 }
 
 .scenario-card h2 {
@@ -132,6 +133,17 @@ body {
 .scenario-card p {
   margin-bottom: 0;
   line-height: 1.5;
+}
+
+/* Feedback color change after player clicks */
+.scenario-card.correct-feedback {
+  border-left-color: #4FCB53;
+  background-color: #f0fff2;
+}
+
+.scenario-card.wrong-feedback {
+  border-left-color: #F5402C;
+  background-color: #fff1ef;
 }
 
 /* Choice buttons */

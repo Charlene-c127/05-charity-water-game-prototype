@@ -11,6 +11,7 @@ const startBtn = document.getElementById("start-btn");
 const resetBtn = document.getElementById("reset-btn");
 const progressFill = document.getElementById("progress-fill");
 const celebration = document.getElementById("celebration");
+const scenarioCard = document.querySelector(".scenario-card");
 
 // Game variables
 let score = 0;
@@ -112,6 +113,8 @@ function startGame() {
   gameActive = true;
   celebration.innerHTML = "";
 
+  scenarioCard.classList.remove("correct-feedback", "wrong-feedback");
+
   updateDisplay();
   showScenario();
 
@@ -162,6 +165,16 @@ function handleChoice(choice) {
   }
 
   feedback.textContent = choice.message;
+
+  // Change card color based on the player's choice
+  scenarioCard.classList.remove("correct-feedback", "wrong-feedback");
+
+  if (choice.points > 0) {
+    scenarioCard.classList.add("correct-feedback");
+  } else {
+    scenarioCard.classList.add("wrong-feedback");
+  }
+
   updateDisplay();
 
   if (score >= goalScore) {
@@ -234,6 +247,8 @@ function resetGame() {
 
   choicesContainer.innerHTML = "";
   celebration.innerHTML = "";
+
+  scenarioCard.classList.remove("correct-feedback", "wrong-feedback");
 }
 
 // Button click events
